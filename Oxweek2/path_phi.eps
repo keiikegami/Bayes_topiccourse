@@ -1,0 +1,1418 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%BoundingBox: 0 0 432 288
+%%Creator: Ox (C) J.A. Doornik, 1994-2006.
+%%Pages: 0
+%%EndComments
+
+%functions
+/X    0 def
+/Y    0 def
+/Rot  0 def
+/tabX 0 def
+/tabW 0 def
+/colW 0 def
+/Slt      { Ltp 0 setdash Lwd setlinewidth } def
+/Solid    { [ ] 0 setdash Lwd setlinewidth } def
+/Mto      { /Y exch def /X exch def X Y moveto} def
+/Lto      { gsave dup 3 -1 roll dup 4 -1 roll newpath X Y moveto lineto stroke exch Mto grestore } def
+/mt       { moveto } def
+/lt       { lineto } def
+/Rt       { rmoveto currentpoint Mto} def
+/Rlt      { 2 copy currentpoint gsave newpath moveto rlineto stroke grestore Rt } def
+/BgnPath  { gsave newpath } def
+/EndPath  { stroke grestore} def
+/Width    { /H exch def /W exch def } def
+/SymBox   { newpath X Y moveto X W add Y lineto X W add Y H add lineto X Y H add lineto X Y lineto closepath } bind def
+/SymTriUp { newpath X Y moveto X W 2 div add Y H add lineto X W add Y lineto X Y lineto closepath } bind def
+/SymTri   { newpath X Y H add moveto X W 2 div add Y lineto X W add Y H add lineto X Y H add lineto closepath } bind def
+/SymTriUp { newpath X Y moveto X W 2 div add Y H add lineto X W add Y lineto X Y lineto closepath } bind def
+/SymCross { newpath X Y moveto X W add Y H add lineto X W add Y moveto X Y H add lineto closepath } bind def
+/SymPlus  { newpath X Y H 2 div add moveto X W add Y H 2 div add lineto X W 2 div add Y moveto X W 2 div add Y H add lineto closepath } bind def
+/SymDiam  { newpath X Y H 2 div add moveto X W 2 div add Y H add lineto X W add Y H 2 div add lineto  X W 2 div add Y lineto X Y H 2 div add lineto closepath } bind def
+/SymCirc  { 1 H W div scale newpath X W 2 div add Y H 2 div add W H div mul W 2 div 0 360 arc closepath } bind def
+/SymDash  { newpath X Y H 2 div add moveto X W add Y H 2 div add lineto closepath } bind def
+/FillStr  { closepath gsave FillColor fill grestore stroke grestore } def
+/Fill     { closepath FillColor fill grestore } def
+/FillBox  { gsave Width SymBox fill grestore } def
+/Box      { gsave Width SymBox Solid stroke grestore } def
+/Boxto    { currentpoint Mto Y sub exch X sub exch Box} def
+/FillBoxto{ currentpoint Mto Y sub exch X sub exch FillBox} def
+/Plus     { gsave Width SymPlus Solid stroke grestore } def
+/FillCir  { gsave Width SymCirc fill stroke grestore } def
+/Circle   { gsave Width SymCirc Solid stroke grestore } def
+/Dash     { gsave Width SymDash Solid stroke grestore } def
+/Cross    { gsave Width SymCross Solid stroke grestore } def
+/FillDiam { gsave Width SymDiam fill stroke grestore } def
+/Diam     { gsave Width SymDiam Solid stroke grestore } def
+/FillTri  { gsave Width SymTri  fill stroke grestore } def
+/Tri      { gsave Width SymTri  Solid stroke grestore } def
+/FillTriUp{ gsave Width SymTriUp fill stroke grestore } def
+/TriUp    { gsave Width SymTriUp Solid stroke grestore } def
+/Text     { gsave X Y moveto
+            Rot 360 eq {dup stringwidth pop neg 0 rmoveto}{Rot rotate} ifelse
+            show grestore
+          } def
+/T        { gsave
+            Rot 360 eq {dup stringwidth pop neg 0 rmoveto}{Rot rotate} ifelse
+            show Rot neg rotate currentpoint Mto grestore X Y moveto} def
+/tb0      { /tabX currentpoint pop def /tabW 0 def} def
+/tb1      { tabW currentpoint pop tabX sub gt {tabW}{currentpoint pop tabX sub} ifelse /tabW exch def } def
+/tb2      { /colW tabW def } def
+/tb3      { colW 0 rmoveto } def
+/A4       { /ptX 595.3 def /ptY 841.9 def } def
+/Letter   { /ptX 612 def /ptY 792 def } def
+/ISOLatin1{ findfont
+            dup length dict
+            begin { 1 index /FID ne {def}{pop pop} ifelse } forall
+              /Encoding ISOLatin1Encoding def
+              currentdict
+            end definefont pop } def
+/Font     { findfont exch scalefont setfont } def
+/FullPage { Landscape 1 eq { ptX ptY /ptX exch def /ptY exch def } if
+            ptX 1.5 div ptY le
+            {/ax ptX def /ay ptX 1.5 mul def}
+            {/ax ptY 1.5 div def /ay ptY def} ifelse
+            /ax ax 17000 div def ax ax scale
+            Landscape 1 eq { 90 rotate 0 ptY ax div neg translate } if
+            ptX ax div 15000 sub 2 div ptY ax div 10000 sub 2 div translate
+          } def
+/EpsPage  { 0.0288 0.0288 scale } def
+
+%lines
+/Linetype0 [ ] def  /Linewidth0 10 def
+/Linetype1 [ ] def  /Linewidth1 6 def
+/Linetype2 [ ] def  /Linewidth2 10 def
+/Linetype3 [ ] def  /Linewidth3 10 def
+/Linetype4 [ ] def  /Linewidth4 10 def
+/Linetype5 [35 35] def  /Linewidth5 10 def
+/Linetype6 [35 35] def  /Linewidth6 20 def
+/Linetype7 [35 35] def  /Linewidth7 30 def
+/Linetype8 [160 80] def  /Linewidth8 10 def
+/Linetype9 [160 80] def  /Linewidth9 20 def
+/Linetype10 [160 80] def  /Linewidth10 30 def
+/Linetype11 [ ] def  /Linewidth11 20 def
+/Linetype12 [ ] def  /Linewidth12 30 def
+/Linetype13 [ ] def  /Linewidth13 50 def
+/Linetype14 [ ] def  /Linewidth14 10 def
+/Linetype15 [ ] def  /Linewidth15 10 def
+
+%fonts
+/F0 /Times-Roman ISOLatin1
+/F1 /Symbol findfont definefont pop
+/F2 /Times-Bold ISOLatin1
+/F3 /Times-Italic ISOLatin1
+/F4 /Times-BoldItalic ISOLatin1
+/F5 /Helvetica ISOLatin1
+/F6 /Courier ISOLatin1
+/F7 /Times-Roman ISOLatin1
+/F8 /Times-Roman ISOLatin1
+/F9 /Times-Roman ISOLatin1
+
+%colors
+/BWG  16 array def
+/Gray 16 array def
+/RGB  16 array def
+% first set all to black
+0 1 15 { dup Gray exch 0 put RGB exch [0 0 0] put } for
+
+% color 0: white <-- background colour
+% color 1: black <-- foreground colour
+BWG  0 1.00 put  Gray  0 1.00 put  RGB  0 [1.00 1.00 1.00] put
+BWG  1 0.00 put  Gray  1 0.00 put  RGB  1 [0.00 0.00 0.00] put
+BWG  2 0.00 put  Gray  2 0.30 put  RGB  2 [1.00 0.00 0.00] put
+BWG  3 0.00 put  Gray  3 0.11 put  RGB  3 [0.00 0.00 1.00] put
+BWG  4 0.00 put  Gray  4 0.35 put  RGB  4 [0.00 0.50 0.50] put
+BWG  5 0.00 put  Gray  5 0.41 put  RGB  5 [1.00 0.00 1.00] put
+BWG  6 0.00 put  Gray  6 0.44 put  RGB  6 [0.00 0.75 0.00] put
+BWG  7 0.00 put  Gray  7 0.45 put  RGB  7 [0.50 0.50 0.00] put
+BWG  8 0.20 put  Gray  8 0.21 put  RGB  8 [0.50 0.00 0.50] put
+BWG  9 0.95 put  Gray  9 0.95 put  RGB  9 [1.00 1.00 0.50] put
+BWG 10 0.79 put  Gray 10 0.80 put  RGB 10 [0.50 1.00 0.50] put
+BWG 11 0.85 put  Gray 11 0.85 put  RGB 11 [0.50 1.00 1.00] put
+BWG 12 0.70 put  Gray 12 0.70 put  RGB 12 [0.00 1.00 1.00] put
+BWG 13 0.25 put  Gray 13 0.25 put  RGB 13 [0.25 0.25 0.25] put
+BWG 14 0.50 put  Gray 14 0.50 put  RGB 14 [0.50 0.50 0.50] put
+BWG 15 0.75 put  Gray 15 0.75 put  RGB 15 [0.75 0.75 0.75] put
+
+%choose a ColorModel: 0=black/white; 1=black/white/gray; 2=gray; 3=color
+/ColorModel 3 def
+
+/SetColor
+  { ColorModel 0 eq
+     { 0 eq {1 setgray}{0 setgray} ifelse }
+     { ColorModel 1 eq
+        { BWG exch get setgray}
+        { ColorModel 2 eq
+           { Gray exch get setgray}
+           { RGB exch get aload pop setrgbcolor} ifelse
+        } ifelse
+     } ifelse
+} def
+/FillColor
+  { ColorModel 3 eq
+     { setrgbcolor }
+     { add add 3 div setgray }
+     ifelse
+} def
+
+%init
+save
+1 setlinejoin
+280 /F0 Font
+10 setlinewidth
+/Ltp Linetype1 def
+/Lwd Linewidth1 def
+
+/User { /ptX 595 def /ptY 842 def} def
+%.PS uses full page printing
+%  select papersize: A4, Letter, User (in points: 72/inch)
+%  select orientation: 0 portrait mode, 1 landscape
+%  full page printing for .PS, else use EpsPage
+%.EPS defers scaling/rotation to document
+
+EpsPage
+%A4  /Landscape 1 def  FullPage
+
+%Graph start
+0 SetColor
+330 /F0 Font
+1 SetColor
+/Ltp { Linetype1 } def /Lwd { Linewidth1 } def Slt
+300 /F0 Font
+853 640 Mto
+853 700 Lto
+1526 640 Mto
+1526 700 Lto
+2199 640 Mto
+2199 700 Lto
+2871 640 Mto
+2871 700 Lto
+3544 640 Mto
+3544 700 Lto
+4216 640 Mto
+4216 700 Lto
+4889 640 Mto
+4889 700 Lto
+5562 640 Mto
+5562 700 Lto
+6234 640 Mto
+6234 700 Lto
+6907 640 Mto
+6907 700 Lto
+7580 640 Mto
+7580 700 Lto
+8252 640 Mto
+8252 700 Lto
+8925 640 Mto
+8925 700 Lto
+9597 640 Mto
+9597 700 Lto
+10270 640 Mto
+10270 700 Lto
+10943 640 Mto
+10943 700 Lto
+11615 640 Mto
+11615 700 Lto
+12288 640 Mto
+12288 700 Lto
+12960 640 Mto
+12960 700 Lto
+13633 640 Mto
+13633 700 Lto
+14306 640 Mto
+14306 700 Lto
+853 640 Mto
+853 760 Lto
+784 340 Mto
+(0) T
+2199 640 Mto
+2199 760 Lto
+1990 340 Mto
+(100)T
+3544 640 Mto
+3544 760 Lto
+3335 340 Mto
+(200)T
+4889 640 Mto
+4889 760 Lto
+4680 340 Mto
+(300)T
+6234 640 Mto
+6234 760 Lto
+6025 340 Mto
+(400)T
+7580 640 Mto
+7580 760 Lto
+7371 340 Mto
+(500)T
+8925 640 Mto
+8925 760 Lto
+8716 340 Mto
+(600)T
+10270 640 Mto
+10270 760 Lto
+10061 340 Mto
+(700)T
+11615 640 Mto
+11615 760 Lto
+11406 340 Mto
+(800)T
+12960 640 Mto
+12960 760 Lto
+12751 340 Mto
+(900)T
+14306 640 Mto
+14306 760 Lto
+14027 340 Mto
+(1000)T
+800 640 Mto
+14360 640 Lto
+1 SetColor
+/Ltp { Linetype1 } def /Lwd { Linewidth1 } def Slt
+/Rot 360 def
+800 640 Mto
+860 640 Lto
+800 829 Mto
+860 829 Lto
+800 1019 Mto
+860 1019 Lto
+800 1208 Mto
+860 1208 Lto
+800 1398 Mto
+860 1398 Lto
+800 1587 Mto
+860 1587 Lto
+800 1777 Mto
+860 1777 Lto
+800 1966 Mto
+860 1966 Lto
+800 2156 Mto
+860 2156 Lto
+800 2346 Mto
+860 2346 Lto
+800 2535 Mto
+860 2535 Lto
+800 2725 Mto
+860 2725 Lto
+800 2914 Mto
+860 2914 Lto
+800 3104 Mto
+860 3104 Lto
+800 3293 Mto
+860 3293 Lto
+800 3483 Mto
+860 3483 Lto
+800 3673 Mto
+860 3673 Lto
+800 3862 Mto
+860 3862 Lto
+800 4052 Mto
+860 4052 Lto
+800 4241 Mto
+860 4241 Lto
+800 4431 Mto
+860 4431 Lto
+800 4620 Mto
+860 4620 Lto
+800 4810 Mto
+860 4810 Lto
+800 5000 Mto
+860 5000 Lto
+800 5189 Mto
+860 5189 Lto
+800 5379 Mto
+860 5379 Lto
+800 5568 Mto
+860 5568 Lto
+800 5758 Mto
+860 5758 Lto
+800 5947 Mto
+860 5947 Lto
+800 6137 Mto
+860 6137 Lto
+800 6326 Mto
+860 6326 Lto
+800 6516 Mto
+860 6516 Lto
+800 6706 Mto
+860 6706 Lto
+800 6895 Mto
+860 6895 Lto
+800 7085 Mto
+860 7085 Lto
+800 7274 Mto
+860 7274 Lto
+800 7464 Mto
+860 7464 Lto
+800 7653 Mto
+860 7653 Lto
+800 7843 Mto
+860 7843 Lto
+800 8033 Mto
+860 8033 Lto
+800 8222 Mto
+860 8222 Lto
+800 8412 Mto
+860 8412 Lto
+800 8601 Mto
+860 8601 Lto
+800 8791 Mto
+860 8791 Lto
+800 8980 Mto
+860 8980 Lto
+800 9170 Mto
+860 9170 Lto
+800 1208 Mto
+920 1208 Lto
+750 1108 Mto
+(0.2)T
+800 2156 Mto
+920 2156 Lto
+750 2056 Mto
+(0.3)T
+800 3104 Mto
+920 3104 Lto
+750 3004 Mto
+(0.4)T
+800 4052 Mto
+920 4052 Lto
+750 3952 Mto
+(0.5)T
+800 4999 Mto
+920 4999 Lto
+750 4899 Mto
+(0.6)T
+800 5947 Mto
+920 5947 Lto
+750 5847 Mto
+(0.7)T
+800 6895 Mto
+920 6895 Lto
+750 6795 Mto
+(0.8)T
+800 7843 Mto
+920 7843 Lto
+750 7743 Mto
+(0.9)T
+800 8791 Mto
+920 8791 Lto
+750 8691 Mto
+(1.0)T
+800 640 Mto
+800 9360 Lto
+/Rot 0 def
+2 SetColor
+/Ltp { Linetype12 } def /Lwd { Linewidth12 } def Slt
+2 SetColor
+/Ltp { Linetype12 } def /Lwd { Linewidth12 } def Slt
+BgnPath
+867 1942 mt
+880 1637 lt
+894 2286 lt
+907 2834 lt
+921 2320 lt
+934 3250 lt
+947 3695 lt
+961 3277 lt
+974 2170 lt
+988 3076 lt
+1001 3469 lt
+1015 4597 lt
+1028 3875 lt
+1042 2767 lt
+1055 2589 lt
+1069 2778 lt
+1082 2398 lt
+1095 1630 lt
+1109 1831 lt
+1122 2532 lt
+1136 1730 lt
+1149 2030 lt
+1163 2969 lt
+1176 2392 lt
+1190 2788 lt
+1203 3811 lt
+1217 3360 lt
+1230 2787 lt
+1243 2727 lt
+1257 2512 lt
+1270 3101 lt
+1284 1673 lt
+1297 2024 lt
+1311 2055 lt
+1324 2586 lt
+1338 2036 lt
+1351 1884 lt
+1365 1458 lt
+1378 2146 lt
+1391 1973 lt
+1405 1732 lt
+1418 1796 lt
+1432 1594 lt
+1445 1666 lt
+1459 2112 lt
+1472 2663 lt
+1486 1628 lt
+1499 1289 lt
+1512 1228 lt
+1526 1466 lt
+1539 3508 lt
+1553 3033 lt
+1566 2528 lt
+1580 2537 lt
+1593 3026 lt
+1607 2029 lt
+1620 1547 lt
+1634 1243 lt
+1647 1806 lt
+1660 1827 lt
+1674 2753 lt
+1687 3101 lt
+1701 4208 lt
+1714 2643 lt
+1728 2759 lt
+1741 3268 lt
+1755 3839 lt
+1768 4633 lt
+1782 3842 lt
+1795 3987 lt
+1808 2234 lt
+1822 2771 lt
+1835 1525 lt
+1849 2669 lt
+1862 2111 lt
+1876 2483 lt
+1889 3386 lt
+1903 2031 lt
+1916 2347 lt
+1930 3918 lt
+1943 1065 lt
+1956 2770 lt
+1970 3539 lt
+1983 1960 lt
+1997 3085 lt
+2010 3906 lt
+2024 4766 lt
+2037 3266 lt
+2051 3203 lt
+2064 2054 lt
+2077 3575 lt
+2091 2335 lt
+2104 2073 lt
+2118 3848 lt
+2131 1884 lt
+2145 2886 lt
+2158 2804 lt
+2172 2413 lt
+2185 1207 lt
+2199 1899 lt
+2212 1810 lt
+2225 2898 lt
+2239 5310 lt
+2252 3658 lt
+2266 4552 lt
+2279 3146 lt
+2293 1400 lt
+2306 2660 lt
+2320 2011 lt
+2333 1753 lt
+2347 2205 lt
+2360 2721 lt
+2373 3565 lt
+2387 2812 lt
+2400 1178 lt
+2414 2424 lt
+2427 2145 lt
+2441 1157 lt
+2454 2141 lt
+2468 888 lt
+2481 1821 lt
+2495 1253 lt
+2508 1089 lt
+2521 2777 lt
+2535 2505 lt
+2548 1672 lt
+2562 1955 lt
+2575 2645 lt
+2589 3099 lt
+2602 2830 lt
+2616 3097 lt
+2629 3133 lt
+2642 1839 lt
+2656 2329 lt
+2669 1371 lt
+2683 2050 lt
+2696 1135 lt
+2710 3234 lt
+2723 2775 lt
+2737 2210 lt
+2750 3243 lt
+2764 3959 lt
+2777 3390 lt
+2790 3663 lt
+2804 3394 lt
+2817 3730 lt
+2831 1851 lt
+2844 1259 lt
+2858 2137 lt
+2871 2401 lt
+2885 854 lt
+2898 3081 lt
+2912 3482 lt
+2925 3193 lt
+2938 3235 lt
+2952 4390 lt
+2965 4852 lt
+2979 9303 lt
+2992 5037 lt
+3006 3044 lt
+3019 2218 lt
+3033 2595 lt
+3046 3459 lt
+3060 2468 lt
+3073 2381 lt
+3086 1344 lt
+3100 1530 lt
+3113 2898 lt
+3127 2395 lt
+3140 2268 lt
+3154 1601 lt
+3167 2139 lt
+3181 1359 lt
+3194 2525 lt
+3207 2956 lt
+3221 4078 lt
+3234 3620 lt
+3248 5197 lt
+3261 3851 lt
+3275 3010 lt
+3288 3394 lt
+3302 3885 lt
+3315 4549 lt
+3329 4947 lt
+3342 3064 lt
+3355 3470 lt
+3369 3385 lt
+3382 3735 lt
+3396 3520 lt
+3409 3494 lt
+3423 1841 lt
+3436 3019 lt
+3450 4811 lt
+3463 3714 lt
+3477 5506 lt
+3490 3537 lt
+3503 2936 lt
+3517 3509 lt
+3530 3887 lt
+3544 4102 lt
+3557 3997 lt
+3571 3631 lt
+3584 2638 lt
+3598 3075 lt
+3611 3244 lt
+3625 3609 lt
+3638 5289 lt
+3651 3647 lt
+3665 2921 lt
+3678 3152 lt
+3692 1834 lt
+3705 2323 lt
+3719 2321 lt
+3732 1304 lt
+3746 1084 lt
+3759 1667 lt
+3772 1911 lt
+3786 1696 lt
+3799 3167 lt
+3813 1911 lt
+3826 2188 lt
+3840 2528 lt
+3853 3722 lt
+3867 2690 lt
+3880 3545 lt
+3894 3209 lt
+3907 2873 lt
+3920 2237 lt
+3934 1813 lt
+3947 1517 lt
+3961 1189 lt
+3974 1774 lt
+3988 1960 lt
+4001 3110 lt
+4015 3735 lt
+4028 1717 lt
+4042 1971 lt
+4055 3155 lt
+4068 2496 lt
+4082 2730 lt
+4095 1498 lt
+4109 2239 lt
+4122 3076 lt
+4136 3093 lt
+4149 4135 lt
+4163 4523 lt
+4176 4144 lt
+4190 4168 lt
+4203 4897 lt
+4216 2479 lt
+4230 4813 lt
+4243 3481 lt
+4257 3996 lt
+4270 2350 lt
+4284 3212 lt
+4297 1750 lt
+4311 3675 lt
+4324 2214 lt
+4337 3459 lt
+4351 4439 lt
+4364 4940 lt
+4378 4117 lt
+4391 3382 lt
+4405 4381 lt
+4418 4105 lt
+4432 2989 lt
+4445 3269 lt
+4459 4058 lt
+4472 4560 lt
+4485 4606 lt
+4499 3940 lt
+4512 2639 lt
+4526 1198 lt
+4539 2082 lt
+4553 2301 lt
+4566 3128 lt
+4580 4535 lt
+4593 3938 lt
+4607 2110 lt
+4620 2047 lt
+4633 1657 lt
+4647 3783 lt
+4660 2122 lt
+4674 1914 lt
+4687 2415 lt
+4701 3293 lt
+4714 3186 lt
+4728 3691 lt
+4741 2312 lt
+4755 1975 lt
+4768 1447 lt
+4781 2179 lt
+4795 3002 lt
+4808 1824 lt
+4822 1287 lt
+4835 2136 lt
+4849 1710 lt
+4862 3083 lt
+4876 2056 lt
+4889 2400 lt
+4902 3017 lt
+4916 3141 lt
+4929 1779 lt
+4943 1115 lt
+4956 1354 lt
+4970 2438 lt
+4983 1850 lt
+4997 1426 lt
+5010 1560 lt
+5024 4103 lt
+5037 5497 lt
+5050 3430 lt
+5064 4695 lt
+5077 5445 lt
+5091 5722 lt
+5104 3128 lt
+5118 3726 lt
+5131 4325 lt
+5145 4182 lt
+5158 2549 lt
+5172 1584 lt
+5185 2571 lt
+5198 2428 lt
+5212 2122 lt
+5225 1942 lt
+5239 1664 lt
+5252 1785 lt
+5266 2045 lt
+5279 2465 lt
+5293 2696 lt
+5306 1956 lt
+5320 1450 lt
+5333 2555 lt
+5346 1374 lt
+5360 2345 lt
+5373 2437 lt
+5387 3719 lt
+5400 1373 lt
+5414 1893 lt
+5427 2268 lt
+5441 4187 lt
+5454 3992 lt
+5467 3143 lt
+5481 3636 lt
+5494 2776 lt
+5508 2618 lt
+5521 5251 lt
+5535 4897 lt
+5548 2704 lt
+5562 4379 lt
+5575 5989 lt
+5589 3816 lt
+5602 1950 lt
+5615 3927 lt
+5629 3727 lt
+5642 3013 lt
+5656 3216 lt
+5669 3498 lt
+5683 2496 lt
+5696 3163 lt
+5710 2423 lt
+5723 2408 lt
+5737 2172 lt
+5750 2947 lt
+5763 3404 lt
+5777 2718 lt
+5790 2544 lt
+5804 2488 lt
+5817 2138 lt
+5831 3141 lt
+5844 3347 lt
+5858 4114 lt
+5871 3627 lt
+5885 3182 lt
+5898 1938 lt
+5911 1524 lt
+5925 1882 lt
+5938 2841 lt
+5952 4286 lt
+5965 3415 lt
+5979 2570 lt
+5992 4083 lt
+6006 3859 lt
+6019 1901 lt
+6032 2865 lt
+6046 3474 lt
+6059 3738 lt
+6073 3326 lt
+6086 2677 lt
+6100 3458 lt
+6113 4435 lt
+6127 3518 lt
+6140 4011 lt
+6154 2542 lt
+6167 3223 lt
+6180 3259 lt
+6194 3459 lt
+6207 3028 lt
+6221 4741 lt
+6234 3657 lt
+6248 2908 lt
+6261 4987 lt
+6275 5016 lt
+6288 4622 lt
+6302 2446 lt
+6315 2399 lt
+6328 3213 lt
+6342 3876 lt
+6355 3547 lt
+6369 4016 lt
+6382 3184 lt
+6396 2248 lt
+6409 2271 lt
+6423 2190 lt
+6436 3849 lt
+6450 2626 lt
+6463 2291 lt
+6476 971 lt
+6490 2006 lt
+6503 2633 lt
+6517 3002 lt
+6530 2050 lt
+6544 2537 lt
+6557 2464 lt
+6571 2903 lt
+6584 1698 lt
+6597 1481 lt
+6611 1202 lt
+6624 2894 lt
+6638 3302 lt
+6651 2956 lt
+6665 3555 lt
+6678 4105 lt
+6692 5754 lt
+6705 4303 lt
+6719 3486 lt
+6732 4372 lt
+6745 2785 lt
+6759 3340 lt
+6772 2942 lt
+6786 2206 lt
+6799 3935 lt
+6813 2425 lt
+6826 3398 lt
+6840 2139 lt
+6853 1535 lt
+6867 2615 lt
+6880 3219 lt
+6893 3265 lt
+6907 3419 lt
+6920 3623 lt
+6934 3257 lt
+6947 3996 lt
+6961 2717 lt
+6974 3316 lt
+6988 2048 lt
+7001 4521 lt
+7015 2732 lt
+7028 2957 lt
+7041 6064 lt
+7055 4019 lt
+7068 3825 lt
+7082 3366 lt
+7095 2528 lt
+7109 2951 lt
+7122 1715 lt
+7136 2622 lt
+7149 4272 lt
+7162 4197 lt
+7176 3740 lt
+7189 3173 lt
+7203 3824 lt
+7216 2408 lt
+7230 2516 lt
+7243 2473 lt
+7257 3990 lt
+7270 4854 lt
+7284 3959 lt
+7297 2552 lt
+7310 3217 lt
+7324 3132 lt
+7337 4247 lt
+7351 2729 lt
+7364 3536 lt
+7378 1645 lt
+7391 3141 lt
+7405 2064 lt
+7418 1912 lt
+7432 1770 lt
+7445 1803 lt
+7458 1796 lt
+7472 1310 lt
+7485 790 lt
+7499 1448 lt
+7512 764 lt
+7526 1190 lt
+7539 2294 lt
+7553 3046 lt
+7566 2152 lt
+7580 1938 lt
+7593 2240 lt
+7606 1750 lt
+7620 1756 lt
+7633 2400 lt
+7647 2297 lt
+7660 2066 lt
+7674 3730 lt
+7687 2792 lt
+7701 2309 lt
+7714 2209 lt
+7727 2288 lt
+7741 1588 lt
+7754 1455 lt
+7768 2175 lt
+7781 1505 lt
+7795 2498 lt
+7808 2607 lt
+7822 2850 lt
+7835 2001 lt
+7849 2867 lt
+7862 1915 lt
+7875 1537 lt
+7889 969 lt
+7902 2277 lt
+7916 4193 lt
+7929 3172 lt
+7943 2501 lt
+7956 4291 lt
+7970 3561 lt
+7983 2783 lt
+7997 3406 lt
+8010 4084 lt
+8023 3099 lt
+8037 3867 lt
+8050 2997 lt
+8064 2683 lt
+8077 3776 lt
+8091 2565 lt
+8104 4730 lt
+8118 3781 lt
+8131 4819 lt
+8145 4506 lt
+8158 1667 lt
+8171 2179 lt
+8185 1968 lt
+8198 3741 lt
+8212 2544 lt
+8225 2842 lt
+8239 3433 lt
+8252 2659 lt
+8266 1357 lt
+8279 2047 lt
+8292 1548 lt
+8306 1587 lt
+8319 2133 lt
+8333 2176 lt
+8346 1712 lt
+8360 1239 lt
+8373 1065 lt
+8387 1631 lt
+8400 2825 lt
+8414 2121 lt
+8427 1705 lt
+8440 2542 lt
+8454 2951 lt
+8467 4652 lt
+8481 2434 lt
+8494 1610 lt
+8508 2290 lt
+8521 1984 lt
+8535 3148 lt
+8548 2219 lt
+8562 1992 lt
+8575 1677 lt
+8588 1789 lt
+8602 1521 lt
+8615 1995 lt
+8629 2375 lt
+8642 3295 lt
+8656 1976 lt
+8669 2113 lt
+8683 1652 lt
+8696 1792 lt
+8710 1784 lt
+8723 1302 lt
+8736 2277 lt
+8750 1223 lt
+8763 851 lt
+8777 1827 lt
+8790 2008 lt
+8804 1801 lt
+8817 1330 lt
+8831 967 lt
+8844 1370 lt
+8857 1777 lt
+8871 2556 lt
+8884 2300 lt
+8898 2413 lt
+8911 2786 lt
+8925 2903 lt
+8938 2441 lt
+8952 2713 lt
+8965 2970 lt
+8979 3137 lt
+8992 2048 lt
+9005 2427 lt
+9019 2299 lt
+9032 2566 lt
+9046 3038 lt
+9059 2381 lt
+9073 4503 lt
+9086 2559 lt
+9100 2172 lt
+9113 2493 lt
+9127 2823 lt
+9140 2025 lt
+9153 1942 lt
+9167 2089 lt
+9180 2341 lt
+9194 1801 lt
+9207 4139 lt
+9221 3657 lt
+9234 1653 lt
+9248 2483 lt
+9261 2802 lt
+9275 2292 lt
+9288 1635 lt
+9301 2800 lt
+9315 2794 lt
+9328 1666 lt
+9342 2346 lt
+9355 2003 lt
+9369 2054 lt
+9382 2861 lt
+9396 2355 lt
+9409 2074 lt
+9422 2089 lt
+9436 2931 lt
+9449 1471 lt
+9463 975 lt
+9476 1225 lt
+9490 2485 lt
+9503 2670 lt
+9517 1946 lt
+9530 2677 lt
+9544 819 lt
+9557 2231 lt
+9570 2020 lt
+9584 3106 lt
+9597 2541 lt
+9611 2540 lt
+9624 1677 lt
+9638 2654 lt
+9651 1790 lt
+9665 1763 lt
+9678 2074 lt
+9692 961 lt
+9705 1865 lt
+9718 3879 lt
+9732 1795 lt
+9745 1031 lt
+9759 1876 lt
+9772 2283 lt
+9786 3036 lt
+9799 1983 lt
+9813 1685 lt
+9826 1876 lt
+9840 3073 lt
+9853 1459 lt
+9866 1271 lt
+9880 2101 lt
+9893 2109 lt
+9907 2853 lt
+9920 1674 lt
+9934 1564 lt
+9947 2225 lt
+9961 1863 lt
+9974 1344 lt
+9987 755 lt
+10001 1739 lt
+10014 1813 lt
+10028 2482 lt
+10041 2153 lt
+10055 3718 lt
+10068 2723 lt
+10082 1680 lt
+10095 1809 lt
+10109 2436 lt
+10122 2963 lt
+10135 1998 lt
+10149 3077 lt
+10162 2575 lt
+10176 2791 lt
+10189 3793 lt
+10203 2559 lt
+10216 2408 lt
+10230 1966 lt
+10243 1869 lt
+10257 3031 lt
+10270 3061 lt
+10283 3127 lt
+10297 3386 lt
+10310 3396 lt
+10324 3853 lt
+10337 2696 lt
+10351 1693 lt
+10364 1684 lt
+10378 1753 lt
+10391 1771 lt
+10405 2680 lt
+10418 2848 lt
+10431 1556 lt
+10445 2193 lt
+10458 2294 lt
+10472 1320 lt
+10485 1625 lt
+10499 1697 lt
+10512 1599 lt
+10526 2851 lt
+10539 2420 lt
+10552 1637 lt
+10566 1863 lt
+10579 2128 lt
+10593 2065 lt
+10606 2697 lt
+10620 1545 lt
+10633 1757 lt
+10647 2187 lt
+10660 1894 lt
+10674 4178 lt
+10687 3055 lt
+10700 1680 lt
+10714 2617 lt
+10727 4035 lt
+10741 2781 lt
+10754 2448 lt
+10768 2997 lt
+10781 4460 lt
+10795 3771 lt
+10808 4405 lt
+10822 2507 lt
+10835 4006 lt
+10848 2450 lt
+10862 2379 lt
+10875 1916 lt
+10889 3495 lt
+10902 3744 lt
+10916 2238 lt
+10929 3132 lt
+10943 2408 lt
+10956 1827 lt
+10970 2155 lt
+10983 2912 lt
+10996 1799 lt
+11010 1580 lt
+11023 1557 lt
+11037 2625 lt
+11050 2485 lt
+11064 1146 lt
+11077 1641 lt
+11091 2962 lt
+11104 2107 lt
+11117 1647 lt
+11131 1774 lt
+11144 2216 lt
+11158 1698 lt
+11171 1081 lt
+11185 1401 lt
+11198 2078 lt
+11212 2058 lt
+11225 1749 lt
+11239 1571 lt
+11252 1507 lt
+11265 1498 lt
+11279 1509 lt
+11292 1821 lt
+11306 2663 lt
+11319 2083 lt
+11333 1355 lt
+11346 1741 lt
+11360 1060 lt
+11373 1694 lt
+11387 2745 lt
+11400 1984 lt
+11413 2486 lt
+11427 2230 lt
+11440 3110 lt
+11454 2198 lt
+11467 2605 lt
+11481 2472 lt
+11494 1402 lt
+11508 1575 lt
+11521 2313 lt
+11535 1638 lt
+11548 1315 lt
+11561 1851 lt
+11575 2191 lt
+11588 2992 lt
+11602 2666 lt
+11615 2528 lt
+11629 2171 lt
+11642 1843 lt
+11656 2398 lt
+11669 2655 lt
+11682 2111 lt
+11696 2429 lt
+11709 2033 lt
+11723 1453 lt
+11736 2274 lt
+11750 2814 lt
+11763 1899 lt
+11777 1829 lt
+11790 3183 lt
+11804 4471 lt
+11817 4896 lt
+11830 1998 lt
+11844 2728 lt
+11857 3589 lt
+11871 4362 lt
+11884 4135 lt
+11898 3090 lt
+11911 3766 lt
+11925 3403 lt
+11938 2642 lt
+11952 3520 lt
+11965 1992 lt
+11978 4442 lt
+11992 2409 lt
+12005 1659 lt
+12019 2991 lt
+12032 1773 lt
+12046 2507 lt
+12059 2770 lt
+12073 2638 lt
+12086 1704 lt
+12100 3080 lt
+12113 2613 lt
+12126 2517 lt
+12140 2340 lt
+12153 3982 lt
+12167 3248 lt
+12180 3542 lt
+12194 1980 lt
+12207 1514 lt
+12221 3348 lt
+12234 1878 lt
+12247 2397 lt
+12261 1372 lt
+12274 1472 lt
+12288 1251 lt
+12301 2133 lt
+12315 2159 lt
+12328 2338 lt
+12342 2148 lt
+12355 1858 lt
+12369 3564 lt
+12382 1538 lt
+12395 1753 lt
+12409 1448 lt
+12422 2621 lt
+12436 1830 lt
+12449 1626 lt
+12463 3014 lt
+12476 2582 lt
+12490 3730 lt
+12503 3030 lt
+12517 2300 lt
+12530 2749 lt
+12543 3513 lt
+12557 2547 lt
+12570 2012 lt
+12584 2563 lt
+12597 1261 lt
+12611 1348 lt
+12624 3656 lt
+12638 3069 lt
+12651 2871 lt
+12665 2670 lt
+12678 4677 lt
+12691 5672 lt
+12705 3100 lt
+12718 2598 lt
+12732 3042 lt
+12745 3246 lt
+12759 2870 lt
+12772 2491 lt
+12786 1937 lt
+12799 1892 lt
+12812 1889 lt
+12826 2337 lt
+12839 2489 lt
+12853 3404 lt
+12866 3156 lt
+12880 3760 lt
+12893 1975 lt
+12907 2318 lt
+12920 1928 lt
+12934 2053 lt
+12947 1999 lt
+12960 2094 lt
+12974 1565 lt
+12987 1434 lt
+13001 2247 lt
+13014 2090 lt
+13028 2106 lt
+13041 2666 lt
+13055 2359 lt
+13068 2488 lt
+13082 3137 lt
+13095 3202 lt
+13108 3102 lt
+13122 1749 lt
+13135 2290 lt
+13149 2340 lt
+13162 2539 lt
+13176 1032 lt
+13189 2656 lt
+13203 1658 lt
+13216 2456 lt
+13230 2962 lt
+13243 3078 lt
+13256 2054 lt
+13270 2922 lt
+13283 2579 lt
+13297 1977 lt
+13310 2255 lt
+13324 4432 lt
+13337 2416 lt
+13351 2168 lt
+13364 3016 lt
+13377 1561 lt
+13391 1872 lt
+13404 3296 lt
+13418 3253 lt
+13431 2642 lt
+13445 2128 lt
+13458 2159 lt
+13472 2855 lt
+13485 5326 lt
+13499 3051 lt
+13512 2174 lt
+13525 2804 lt
+13539 3821 lt
+13552 2679 lt
+13566 4634 lt
+13579 2711 lt
+13593 2395 lt
+13606 2812 lt
+13620 2042 lt
+13633 1380 lt
+13647 1630 lt
+13660 2820 lt
+13673 2751 lt
+13687 2895 lt
+13700 5029 lt
+13714 4151 lt
+13727 2275 lt
+13741 1796 lt
+13754 1811 lt
+13768 1664 lt
+13781 2306 lt
+13795 1814 lt
+13808 1595 lt
+13821 2620 lt
+13835 2793 lt
+13848 2817 lt
+13862 2741 lt
+13875 4521 lt
+13889 3724 lt
+13902 3805 lt
+13916 3186 lt
+13929 2895 lt
+13942 2285 lt
+13956 2479 lt
+13969 2811 lt
+13983 3135 lt
+13996 1889 lt
+14010 1418 lt
+14023 1455 lt
+14037 2526 lt
+14050 2610 lt
+14064 2907 lt
+14077 3007 lt
+14090 1676 lt
+14104 4136 lt
+14117 1957 lt
+14131 2633 lt
+14144 1722 lt
+14158 2374 lt
+14171 2323 lt
+14185 5064 lt
+14198 5201 lt
+14212 1927 lt
+14225 1844 lt
+14238 2581 lt
+14252 2371 lt
+14265 2622 lt
+14279 1945 lt
+14292 2418 lt
+14306 3026 lt
+EndPath
+1 SetColor
+1100 9420 Mto
+(Path of )T
+300 /F1 Font(f)T 300 /F0 Font
+%Graph end
+
+restore
+showpage
+%%EOF
